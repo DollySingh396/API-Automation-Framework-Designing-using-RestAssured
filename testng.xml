@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+     to generate report adding listener that will listen to the events
+    <listeners>
+        <listener class-name="api.utilities.extentReportManager">
+        </listener>
+    </listeners>
+    <test verbose="2" preserve-order="true" name="/Users/dolly.singh/RestAssuredProject/FrameworkDesigning/src/test/java/api/test">
+        <classes>
+            <class name="api.test.dataDrivenTests">
+                <methods>
+                    <include name="testCreateUser"/>
+                    <include name="testDeleteUser"/>
+                    <include name="testGetUser"/>
+                    <include name="testUpdateUser"/>
+                </methods>
+            </class>
+            <class name="api.test.userTests">
+                <methods>
+                    <include name="testPostUserAPI"/>
+                    <include name="testGetUserAPI"/>
+                    <include name="testUpdateUserAPI"/>
+                    <include name="testDeleteUser"/>
+                </methods>
+            </class>
+            <class name="api.test.userTestsViaRoutesPropertiesFile">
+                <methods>
+                    <include name="testPostUserAPI"/>
+                    <include name="testGetUserAPI"/>
+                    <include name="testUpdateUserAPI"/>
+                    <include name="testDeleteUser"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
